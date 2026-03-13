@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json",
+  "title": "Google Cloud Translation API Schema",
+  "description": "JSON Schema for the Google Cloud Translation API request and response objects.",
+  "type": "object",
+  "$defs": {
+    "TranslateTextRequest": {
+      "type": "object",
+      "required": ["q", "target"],
+      "properties": {
+        "q": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The text to translate. Specify up to 128 strings."
+        },
+        "target": {
+          "type": "string",
+          "description": "The target language code (ISO 639-1)."
+        },
+        "source": {
+          "type": "string",
+          "description": "The source language code (ISO 639-1)."
+        },
+        "format": {
+          "type": "string",
+          "enum": ["text", "html"],
+          "description": "The format of the source text."
+        },
+        "model": {
+          "type": "string",
+          "description": "The translation model (base or nmt)."
+        }
+      }
+    },
+    "TranslateTextResponse": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "properties": {
+            "translations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Translation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Translation": {
+      "type": "object",
+      "properties": {
+        "translatedText": {
+          "type": "string",
+          "description": "The translated text."
+        },
+        "detectedSourceLanguage": {
+          "type": "string",
+          "description": "The detected source language code."
+        },
+        "model": {
+          "type": "string",
+          "description": "The translation model used."
+        }
+      }
+    },
+    "DetectLanguageRequest": {
+      "type": "object",
+      "required": ["q"],
+      "properties": {
+        "q": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The text to detect the language of."
+        }
+      }
+    },
+    "Detection": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "The detected language code."
+        },
+        "confidence": {
+          "type": "number",
+          "description": "Confidence level of the detection."
+        },
+        "isReliable": {
+          "type": "boolean",
+          "description": "Whether the detection is reliable."
+        }
+      }
+    },
+    "Language": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "The language code (ISO 639-1)."
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable language name."
+        }
+      }
+    }
+  }
+}

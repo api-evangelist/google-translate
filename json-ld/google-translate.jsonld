@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "goog": "https://cloud.google.com/translate/docs/reference/rest/v2/",
+    "translateRequest": "goog:TranslateTextRequest",
+    "translateResponse": "goog:TranslateTextResponse",
+    "sourceLanguage": {
+      "@id": "goog:source",
+      "@type": "xsd:string"
+    },
+    "targetLanguage": {
+      "@id": "goog:target",
+      "@type": "xsd:string"
+    },
+    "translatedText": {
+      "@id": "goog:translatedText",
+      "@type": "xsd:string"
+    },
+    "detectedSourceLanguage": {
+      "@id": "goog:detectedSourceLanguage",
+      "@type": "xsd:string"
+    },
+    "confidence": {
+      "@id": "goog:confidence",
+      "@type": "xsd:float"
+    },
+    "model": {
+      "@id": "goog:model",
+      "@type": "xsd:string"
+    },
+    "inputText": {
+      "@id": "goog:q",
+      "@type": "xsd:string"
+    },
+    "format": {
+      "@id": "goog:format",
+      "@type": "xsd:string"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
