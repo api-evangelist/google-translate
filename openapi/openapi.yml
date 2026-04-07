@@ -34,7 +34,7 @@ paths:
   /language/translate/v2:
     post:
       operationId: translateText
-      summary: Translate Text
+      summary: Google Cloud Translation API Translate Text
       description: Translates input text from one language to another.
       tags:
         - Translations
@@ -61,7 +61,7 @@ paths:
   /language/translate/v2/detect:
     post:
       operationId: detectLanguage
-      summary: Detect Language
+      summary: Google Cloud Translation API Detect Language
       description: Detects the language of the provided text.
       tags:
         - Detections
@@ -88,7 +88,7 @@ paths:
   /language/translate/v2/languages:
     get:
       operationId: listLanguages
-      summary: List Supported Languages
+      summary: Google Cloud Translation API List Supported Languages
       description: Returns a list of supported languages for translation.
       tags:
         - Languages
