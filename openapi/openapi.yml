@@ -24,12 +24,12 @@ servers:
   - url: https://translate.googleapis.com
     description: Google Cloud Translation API v3 Server
 tags:
-  - name: Translations
-    description: Translate text between languages
-  - name: Languages
-    description: List supported languages
   - name: Detections
     description: Detect language of text
+  - name: Languages
+    description: List supported languages
+  - name: Translations
+    description: Translate text between languages
 paths:
   /language/translate/v2:
     post:

@@ -14,13 +14,13 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Translation
-  - Machine Translation
-  - Language Detection
-  - Natural Language Processing
   - Google Cloud
-  - Localization
   - Internationalization
+  - Language Detection
+  - Localization
+  - Machine Translation
+  - Natural Language Processing
+  - Translation
 apis:
   - name: Google Cloud Translation API
     description: >-
