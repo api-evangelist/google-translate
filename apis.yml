@@ -1,9 +1,10 @@
 aid: google-translate
 name: Google Cloud Translation API
-description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology.
-  It enables developers to dynamically translate text between thousands of language pairs, detect the source language of text,
-  and retrieve lists of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including
-  batch translation, custom models, glossaries, and adaptive translation.
+description: >-
+  The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It
+  enables developers to dynamically translate text between thousands of language pairs, detect the source language of
+  text, and retrieve lists of supported languages. The API supports both basic (v2) and advanced (v3) translation
+  capabilities including batch translation, custom models, glossaries, and adaptive translation.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/apis.yml
 created: '2026-03-13'
@@ -11,65 +12,62 @@ modified: '2026-05-19'
 specificationVersion: '0.19'
 type: Index
 tags:
-- Google Cloud
-- Internationalization
-- Language Detection
-- Localization
-- Machine Translation
-- Natural Language Processing
-- Translation
+  - Google Cloud
+  - Internationalization
+  - Language Detection
+  - Localization
+  - Machine Translation
+  - Natural Language Processing
+  - Translation
 apis:
-- name: Google Cloud Translation API
-  description: REST API for translating text between languages, detecting source languages, and listing supported languages
-    using Google's neural machine translation models.
-  humanURL: https://cloud.google.com/translate/docs
-  baseURL: https://translation.googleapis.com
-  properties:
-  - type: Documentation
-    url: https://cloud.google.com/translate/docs/reference/rest
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/openapi/openapi.yml
-  - type: Authentication
-    url: https://cloud.google.com/docs/authentication
+  - name: Google Cloud Translation API
+    description: >-
+      REST API for translating text between languages, detecting source languages, and listing supported languages using
+      Google's neural machine translation models.
+    humanURL: https://cloud.google.com/translate/docs
+    baseURL: https://translation.googleapis.com
+    properties:
+      - type: Documentation
+        url: https://cloud.google.com/translate/docs/reference/rest
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/openapi/openapi.yml
+      - type: Authentication
+        url: https://cloud.google.com/docs/authentication
+      - type: GettingStarted
+        url: https://cloud.google.com/translate/docs/setup
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
+      - type: JSONLD
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/google-translate
+  - type: Portal
+    url: https://cloud.google.com/translate
   - type: GettingStarted
     url: https://cloud.google.com/translate/docs/setup
-  - type: JSONSchema
-    url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
+  - type: Documentation
+    url: https://cloud.google.com/translate/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: Pricing
+    url: https://cloud.google.com/translate/pricing
+  - type: TermsOfService
+    url: https://cloud.google.com/terms
+  - type: PrivacyPolicy
+    url: https://policies.google.com/privacy
+  - type: StatusPage
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://cloud.google.com/translate/docs/support
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
-  - type: NaftikoCapability
-    url: capabilities/openapi-detections.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-languages.yaml
-  - type: NaftikoCapability
-    url: capabilities/openapi-translations.yaml
-common:
-- type: LinkedIn
-  url: https://www.linkedin.com/showcase/google-translate
-- type: Portal
-  url: https://cloud.google.com/translate
-- type: GettingStarted
-  url: https://cloud.google.com/translate/docs/setup
-- type: Documentation
-  url: https://cloud.google.com/translate/docs
-- type: Authentication
-  url: https://cloud.google.com/docs/authentication
-- type: Pricing
-  url: https://cloud.google.com/translate/pricing
-- type: TermsOfService
-  url: https://cloud.google.com/terms
-- type: PrivacyPolicy
-  url: https://policies.google.com/privacy
-- type: StatusPage
-  url: https://status.cloud.google.com/
-- type: Support
-  url: https://cloud.google.com/translate/docs/support
-- type: JSONLD
-  url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
-- type: Integrations
-  url: https://cloud.google.com/marketplace
+  - type: Integrations
+    url: https://cloud.google.com/marketplace
 integrations:
-- name: Become a Partner
+  - name: Become a Partner
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
