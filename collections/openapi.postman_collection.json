@@ -1,0 +1,378 @@
+{
+  "item": [
+    {
+      "id": "ca1c7769-83a4-46e4-b5ab-511c8b6eb680",
+      "name": "Detections",
+      "description": {
+        "content": "Detect language of text",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1dd95617-6b89-4dd4-bfd4-afd357492057",
+          "name": "Google Cloud Translation API Detect Language",
+          "request": {
+            "name": "Google Cloud Translation API Detect Language",
+            "description": {
+              "content": "Detects the language of the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "language",
+                "translate",
+                "v2",
+                "detect"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for authentication"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "baf83c64-0637-4cb2-b41a-aac903d4cf01",
+              "name": "Successful detection response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "translate",
+                    "v2",
+                    "detect"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"detections\": [\n      [\n        {\n          \"language\": \"string\",\n          \"confidence\": 2700.175853439204,\n          \"isReliable\": true\n        },\n        {\n          \"language\": \"string\",\n          \"confidence\": 8986.791324811804,\n          \"isReliable\": false\n        }\n      ],\n      [\n        {\n          \"language\": \"string\",\n          \"confidence\": 3738.644873143415,\n          \"isReliable\": false\n        },\n        {\n          \"language\": \"string\",\n          \"confidence\": 1762.8823033560348,\n          \"isReliable\": true\n        }\n      ]\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "f6cf3fa6-3280-4434-a8a9-2422b20dbbb6",
+      "name": "Languages",
+      "description": {
+        "content": "List supported languages",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1a01e983-6162-4304-a0bc-11fe4fa7349e",
+          "name": "Google Cloud Translation API List Supported Languages",
+          "request": {
+            "name": "Google Cloud Translation API List Supported Languages",
+            "description": {
+              "content": "Returns a list of supported languages for translation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "language",
+                "translate",
+                "v2",
+                "languages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for authentication"
+                },
+                {
+                  "disabled": false,
+                  "key": "target",
+                  "value": "<string>",
+                  "description": "The language to use to return localized, human readable names of supported languages."
+                },
+                {
+                  "disabled": false,
+                  "key": "model",
+                  "value": "<string>",
+                  "description": "The translation model. Can be either base for the Phrase-Based Machine Translation model, or nmt for the Neural Machine Translation model."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4e9bdd2-8d12-4496-93b9-9955cc815333",
+              "name": "Successful response with list of languages",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "translate",
+                    "v2",
+                    "languages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "target",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "model",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"languages\": [\n      {\n        \"language\": \"string\",\n        \"name\": \"string\"\n      },\n      {\n        \"language\": \"string\",\n        \"name\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "bfbd11bf-ec6c-40be-b469-ae791acf8a76",
+      "name": "Translations",
+      "description": {
+        "content": "Translate text between languages",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "15a996ad-0e6c-4b0a-829f-fa7824954eae",
+          "name": "Google Cloud Translation API Translate Text",
+          "request": {
+            "name": "Google Cloud Translation API Translate Text",
+            "description": {
+              "content": "Translates input text from one language to another.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "language",
+                "translate",
+                "v2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for authentication"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"target\": \"<string>\",\n  \"source\": \"<string>\",\n  \"format\": \"<string>\",\n  \"model\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cc85848b-501d-423b-b742-8dc4e7cde0a7",
+              "name": "Successful translation response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "translate",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"target\": \"<string>\",\n  \"source\": \"<string>\",\n  \"format\": \"<string>\",\n  \"model\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"translations\": [\n      {\n        \"translatedText\": \"string\",\n        \"detectedSourceLanguage\": \"string\",\n        \"model\": \"string\"\n      },\n      {\n        \"translatedText\": \"string\",\n        \"detectedSourceLanguage\": \"string\",\n        \"model\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://translation.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "88a066d6-ebe0-4498-9382-03c5f83057ac",
+    "name": "Google Cloud Translation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}
