@@ -42,6 +42,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-translate-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-translate-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/google-translate
   - type: Portal
@@ -66,6 +70,8 @@ common:
     url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
   - type: Integrations
     url: https://cloud.google.com/marketplace
+  - url: https://docs.cloud.google.com/feeds/translate-release-notes.xml
+    type: Blog
 integrations:
   - name: Become a Partner
 maintainers:
