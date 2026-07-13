@@ -1,0 +1,14 @@
+{
+  "repo": "google-translate",
+  "feeds": [
+    {
+      "source": "https://docs.cloud.google.com/feeds/translate-release-notes.xml",
+      "feed_url": "https://docs.cloud.google.com/feeds/translate-release-notes.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 30
+}
