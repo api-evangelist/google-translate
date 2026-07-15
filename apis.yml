@@ -42,6 +42,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-translate-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-translate-vulnerability-disclosure.yml
   - type: DomainSecurity
