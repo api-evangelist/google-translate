@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Translation Detections Languages API
+  description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/translate
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://translation.googleapis.com
+  description: Google Cloud Translation API v2 Server
+- url: https://translate.googleapis.com
+  description: Google Cloud Translation API v3 Server
+tags:
+- name: Languages
+  description: List supported languages
+paths:
+  /language/translate/v2/languages:
+    get:
+      operationId: listLanguages
+      summary: Google Cloud Translation API List Supported Languages
+      description: Returns a list of supported languages for translation.
+      tags:
+      - Languages
+      parameters:
+      - name: key
+        in: query
+        description: API key for authentication
+        required: true
+        schema:
+          type: string
+      - name: target
+        in: query
+        description: The language to use to return localized, human readable names of supported languages.
+        schema:
+          type: string
+      - name: model
+        in: query
+        description: The translation model. Can be either base for the Phrase-Based Machine Translation model, or nmt for the Neural Machine Translation model.
+        schema:
+          type: string
+          enum:
+          - base
+          - nmt
+      responses:
+        '200':
+          description: Successful response with list of languages
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListLanguagesResponse'
+components:
+  schemas:
+    ListLanguagesResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            languages:
+              type: array
+              items:
+                $ref: '#/components/schemas/Language'
+    Language:
+      type: object
+      properties:
+        language:
+          type: string
+          description: The language code (ISO 639-1).
+        name:
+          type: string
+          description: The human-readable name of the language.
+externalDocs:
+  description: Google Cloud Translation API Documentation
+  url: https://cloud.google.com/translate/docs

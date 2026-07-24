@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Translation Detections API
+  description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/translate
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://translation.googleapis.com
+  description: Google Cloud Translation API v2 Server
+- url: https://translate.googleapis.com
+  description: Google Cloud Translation API v3 Server
+tags:
+- name: Detections
+  description: Detect language of text
+paths:
+  /language/translate/v2/detect:
+    post:
+      operationId: detectLanguage
+      summary: Google Cloud Translation API Detect Language
+      description: Detects the language of the provided text.
+      tags:
+      - Detections
+      parameters:
+      - name: key
+        in: query
+        description: API key for authentication
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DetectLanguageRequest'
+      responses:
+        '200':
+          description: Successful detection response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetectLanguageResponse'
+components:
+  schemas:
+    DetectLanguageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            detections:
+              type: array
+              items:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Detection'
+    DetectLanguageRequest:
+      type: object
+      required:
+      - q
+      properties:
+        q:
+          type: array
+          items:
+            type: string
+          description: The text to detect the language of.
+    Detection:
+      type: object
+      properties:
+        language:
+          type: string
+          description: The detected language code.
+        confidence:
+          type: number
+          description: The confidence of the detection.
+        isReliable:
+          type: boolean
+          description: Whether the detection is reliable.
+externalDocs:
+  description: Google Cloud Translation API Documentation
+  url: https://cloud.google.com/translate/docs

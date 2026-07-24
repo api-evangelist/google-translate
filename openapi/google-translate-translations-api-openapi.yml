@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Translation Detections Translations API
+  description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/translate
+  license:
+    name: Google APIs Terms of Service
+    url: https://developers.google.com/terms
+servers:
+- url: https://translation.googleapis.com
+  description: Google Cloud Translation API v2 Server
+- url: https://translate.googleapis.com
+  description: Google Cloud Translation API v3 Server
+tags:
+- name: Translations
+  description: Translate text between languages
+paths:
+  /language/translate/v2:
+    post:
+      operationId: translateText
+      summary: Google Cloud Translation API Translate Text
+      description: Translates input text from one language to another.
+      tags:
+      - Translations
+      parameters:
+      - name: key
+        in: query
+        description: API key for authentication
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TranslateTextRequest'
+      responses:
+        '200':
+          description: Successful translation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranslateTextResponse'
+components:
+  schemas:
+    Translation:
+      type: object
+      properties:
+        translatedText:
+          type: string
+          description: The translated text.
+        detectedSourceLanguage:
+          type: string
+          description: The detected source language code.
+        model:
+          type: string
+          description: The translation model used.
+    TranslateTextRequest:
+      type: object
+      required:
+      - q
+      - target
+      properties:
+        q:
+          type: array
+          items:
+            type: string
+          description: The text to translate.
+        target:
+          type: string
+          description: The target language code (ISO 639-1).
+        source:
+          type: string
+          description: The source language code (ISO 639-1). If not specified, the API will attempt to detect the source language.
+        format:
+          type: string
+          enum:
+          - text
+          - html
+          description: The format of the source text.
+        model:
+          type: string
+          description: The translation model (base or nmt).
+    TranslateTextResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            translations:
+              type: array
+              items:
+                $ref: '#/components/schemas/Translation'
+externalDocs:
+  description: Google Cloud Translation API Documentation
+  url: https://cloud.google.com/translate/docs
