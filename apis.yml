@@ -5,7 +5,19 @@ description: >-
   enables developers to dynamically translate text between thousands of language pairs, detect the source language of
   text, and retrieve lists of supported languages. The API supports both basic (v2) and advanced (v3) translation
   capabilities including batch translation, custom models, glossaries, and adaptive translation.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-translate.png
 url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -20,28 +32,75 @@ tags:
   - Natural Language Processing
   - Translation
 apis:
-  - name: Google Cloud Translation API
-    description: >-
-      REST API for translating text between languages, detecting source languages, and listing supported languages using
-      Google's neural machine translation models.
-    humanURL: https://cloud.google.com/translate/docs
-    baseURL: https://translation.googleapis.com
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/translate/docs/reference/rest
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/openapi/openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/docs/authentication
-      - type: GettingStarted
-        url: https://cloud.google.com/translate/docs/setup
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
-      - type: JSONLD
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
+- aid: google-translate:google-translate-detections-api
+  name: Google Cloud Translation API Detections API
+  description: Detect language of text
+  humanURL: https://cloud.google.com/translate/docs
+  baseURL: https://translation.googleapis.com
+  tags:
+  - Detections
+  properties:
+  - type: OpenAPI
+    url: openapi/google-translate-detections-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/translate/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/translate/docs/setup
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
+- aid: google-translate:google-translate-languages-api
+  name: Google Cloud Translation API Languages API
+  description: List supported languages
+  humanURL: https://cloud.google.com/translate/docs
+  baseURL: https://translation.googleapis.com
+  tags:
+  - Languages
+  properties:
+  - type: OpenAPI
+    url: openapi/google-translate-languages-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/translate/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/translate/docs/setup
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
+- aid: google-translate:google-translate-translations-api
+  name: Google Cloud Translation API Translations API
+  description: Translate text between languages
+  humanURL: https://cloud.google.com/translate/docs
+  baseURL: https://translation.googleapis.com
+  tags:
+  - Translations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-translate-translations-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/translate/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/translate/docs/setup
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-schema/google-translate.json
+  - type: JSONLD
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-translation-api/overview
   - type: AgenticAccess
     url: agentic-access/google-translate-agentic-access.yml
   - type: VulnerabilityDisclosure
