@@ -1,0 +1,172 @@
+{
+  "info": {
+    "_postman_id": "63978fd3-1f19-491b-8bfe-3bdd79098d2e",
+    "name": "Google Cloud Translation Detections API",
+    "description": "The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:29.000Z",
+    "updatedAt": "2026-07-28T01:50:29.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-63978fd3-1f19-491b-8bfe-3bdd79098d2e"
+  },
+  "item": [
+    {
+      "name": "language",
+      "item": [
+        {
+          "name": "translate",
+          "item": [
+            {
+              "name": "v2",
+              "item": [
+                {
+                  "name": "detect",
+                  "item": [
+                    {
+                      "name": "Google Cloud Translation API Detect Language",
+                      "id": "15fb48cf-c6da-44b5-bb67-ece33a393983",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/language/translate/v2/detect?key=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "language",
+                            "translate",
+                            "v2",
+                            "detect"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) API key for authentication",
+                              "key": "key",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "Detects the language of the provided text."
+                      },
+                      "response": [
+                        {
+                          "id": "95fb0618-b25e-4c56-8f0f-629cdf78c80f",
+                          "name": "Successful detection response",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"q\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/language/translate/v2/detect?key=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "language",
+                                "translate",
+                                "v2",
+                                "detect"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) API key for authentication",
+                                  "key": "key",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"data\": {\n    \"detections\": [\n      [\n        {\n          \"language\": \"<string>\",\n          \"confidence\": \"<number>\",\n          \"isReliable\": \"<boolean>\"\n        },\n        {\n          \"language\": \"<string>\",\n          \"confidence\": \"<number>\",\n          \"isReliable\": \"<boolean>\"\n        }\n      ],\n      [\n        {\n          \"language\": \"<string>\",\n          \"confidence\": \"<number>\",\n          \"isReliable\": \"<boolean>\"\n        },\n        {\n          \"language\": \"<string>\",\n          \"confidence\": \"<number>\",\n          \"isReliable\": \"<boolean>\"\n        }\n      ]\n    ]\n  }\n}",
+                          "createdAt": "2026-07-28T01:50:29.000Z",
+                          "updatedAt": "2026-07-28T01:50:29.000Z",
+                          "uid": "35240-95fb0618-b25e-4c56-8f0f-629cdf78c80f"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:50:29.000Z",
+                      "updatedAt": "2026-07-28T01:50:29.000Z",
+                      "uid": "35240-15fb48cf-c6da-44b5-bb67-ece33a393983"
+                    }
+                  ],
+                  "id": "4265242f-c82d-4008-b14e-b672d5dc6c1f",
+                  "createdAt": "2026-07-28T01:50:29.000Z",
+                  "updatedAt": "2026-07-28T01:50:29.000Z",
+                  "uid": "35240-4265242f-c82d-4008-b14e-b672d5dc6c1f"
+                }
+              ],
+              "id": "d28b4aa0-d03f-4b51-8e83-26355c033fab",
+              "createdAt": "2026-07-28T01:50:29.000Z",
+              "updatedAt": "2026-07-28T01:50:29.000Z",
+              "uid": "35240-d28b4aa0-d03f-4b51-8e83-26355c033fab"
+            }
+          ],
+          "id": "815e98f8-69ed-4c2c-8fe4-ccabfa6316c9",
+          "createdAt": "2026-07-28T01:50:29.000Z",
+          "updatedAt": "2026-07-28T01:50:29.000Z",
+          "uid": "35240-815e98f8-69ed-4c2c-8fe4-ccabfa6316c9"
+        }
+      ],
+      "id": "d74ce3d1-e5cc-4c15-b293-02d423655647",
+      "createdAt": "2026-07-28T01:50:29.000Z",
+      "updatedAt": "2026-07-28T01:50:29.000Z",
+      "uid": "35240-d74ce3d1-e5cc-4c15-b293-02d423655647"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://translation.googleapis.com"
+    }
+  ]
+}

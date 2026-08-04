@@ -1,0 +1,18 @@
+{
+  "provider": "google-translate",
+  "sources": [
+    "google-translate-detections-api-openapi.yml",
+    "google-translate-languages-api-openapi.yml",
+    "google-translate-translations-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-translate-detections-api-openapi.yml",
+    "google-translate-languages-api-openapi.yml",
+    "google-translate-translations-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

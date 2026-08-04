@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "da0e370e-58a5-4905-b656-e29019b08fc5",
+    "name": "Google Cloud Translation Detections Languages API",
+    "description": "The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:50:29.000Z",
+    "updatedAt": "2026-07-28T01:50:30.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-da0e370e-58a5-4905-b656-e29019b08fc5"
+  },
+  "item": [
+    {
+      "name": "language",
+      "item": [
+        {
+          "name": "translate",
+          "item": [
+            {
+              "name": "v2",
+              "item": [
+                {
+                  "name": "languages",
+                  "item": [
+                    {
+                      "name": "Google Cloud Translation API List Supported Languages",
+                      "id": "fa3b3e8f-9126-4510-87b4-84f2355d8a45",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/language/translate/v2/languages?key=<string>&target=<string>&model=nmt",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "language",
+                            "translate",
+                            "v2",
+                            "languages"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) API key for authentication",
+                              "key": "key",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "The language to use to return localized, human readable names of supported languages.",
+                              "key": "target",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "The translation model. Can be either base for the Phrase-Based Machine Translation model, or nmt for the Neural Machine Translation model.",
+                              "key": "model",
+                              "value": "nmt"
+                            }
+                          ]
+                        },
+                        "description": "Returns a list of supported languages for translation."
+                      },
+                      "response": [
+                        {
+                          "id": "b0739762-5eef-4168-8c9a-430187454476",
+                          "name": "Successful response with list of languages",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/language/translate/v2/languages?key=<string>&target=<string>&model=nmt",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "language",
+                                "translate",
+                                "v2",
+                                "languages"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) API key for authentication",
+                                  "key": "key",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "The language to use to return localized, human readable names of supported languages.",
+                                  "key": "target",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "The translation model. Can be either base for the Phrase-Based Machine Translation model, or nmt for the Neural Machine Translation model.",
+                                  "key": "model",
+                                  "value": "nmt"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"data\": {\n    \"languages\": [\n      {\n        \"language\": \"<string>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"language\": \"<string>\",\n        \"name\": \"<string>\"\n      }\n    ]\n  }\n}",
+                          "createdAt": "2026-07-28T01:50:30.000Z",
+                          "updatedAt": "2026-07-28T01:50:30.000Z",
+                          "uid": "35240-b0739762-5eef-4168-8c9a-430187454476"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:50:30.000Z",
+                      "updatedAt": "2026-07-28T01:50:30.000Z",
+                      "uid": "35240-fa3b3e8f-9126-4510-87b4-84f2355d8a45"
+                    }
+                  ],
+                  "id": "4ec66430-656e-4941-a442-39b2dcc73aa1",
+                  "createdAt": "2026-07-28T01:50:30.000Z",
+                  "updatedAt": "2026-07-28T01:50:30.000Z",
+                  "uid": "35240-4ec66430-656e-4941-a442-39b2dcc73aa1"
+                }
+              ],
+              "id": "fc98da97-1501-4aaf-9064-d80c9de28591",
+              "createdAt": "2026-07-28T01:50:30.000Z",
+              "updatedAt": "2026-07-28T01:50:30.000Z",
+              "uid": "35240-fc98da97-1501-4aaf-9064-d80c9de28591"
+            }
+          ],
+          "id": "e2a63156-8a6e-4888-a086-bfa54f0e2f67",
+          "createdAt": "2026-07-28T01:50:30.000Z",
+          "updatedAt": "2026-07-28T01:50:30.000Z",
+          "uid": "35240-e2a63156-8a6e-4888-a086-bfa54f0e2f67"
+        }
+      ],
+      "id": "3b6314a5-c4f5-42a2-b79a-de492c2d7709",
+      "createdAt": "2026-07-28T01:50:30.000Z",
+      "updatedAt": "2026-07-28T01:50:30.000Z",
+      "uid": "35240-3b6314a5-c4f5-42a2-b79a-de492c2d7709"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://translation.googleapis.com"
+    }
+  ]
+}
