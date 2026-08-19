@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Translation Detections API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Detections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Translation API Detect Language",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://translation.googleapis.com/language/translate/v2/detect",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key for authentication"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Detects the language of the provided text."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

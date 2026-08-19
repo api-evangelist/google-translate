@@ -1,0 +1,140 @@
+{
+  "item": [
+    {
+      "id": "3d0f5925-56a6-45e4-905b-49e58e8decad",
+      "name": "Languages",
+      "description": {
+        "content": "List supported languages",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2832edce-f6d4-4bb5-92cf-44ad825a20c8",
+          "name": "Google Cloud Translation API List Supported Languages",
+          "request": {
+            "name": "Google Cloud Translation API List Supported Languages",
+            "description": {
+              "content": "Returns a list of supported languages for translation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "language",
+                "translate",
+                "v2",
+                "languages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(Required) API key for authentication"
+                },
+                {
+                  "disabled": false,
+                  "key": "target",
+                  "value": "<string>",
+                  "description": "The language to use to return localized, human readable names of supported languages."
+                },
+                {
+                  "disabled": false,
+                  "key": "model",
+                  "value": "<string>",
+                  "description": "The translation model. Can be either base for the Phrase-Based Machine Translation model, or nmt for the Neural Machine Translation model."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "106b94ad-6f32-4d8a-bde1-205349596371",
+              "name": "Successful response with list of languages",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "language",
+                    "translate",
+                    "v2",
+                    "languages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "target",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "model",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"languages\": [\n      {\n        \"language\": \"string\",\n        \"name\": \"string\"\n      },\n      {\n        \"language\": \"string\",\n        \"name\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://translation.googleapis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2f82d87a-46f8-43da-be94-6ee3eeadcec8",
+    "name": "Google Cloud Translation Detections Languages API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}
