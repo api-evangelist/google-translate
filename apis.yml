@@ -60,6 +60,8 @@ apis:
   humanURL: https://cloud.google.com/translate/docs
   baseURL: https://translation.googleapis.com
   tags:
+  - Language
+  tags_raw:
   - Languages
   properties:
   - type: OpenAPI
