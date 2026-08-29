@@ -5,6 +5,18 @@ description: >-
   enables developers to dynamically translate text between thousands of language pairs, detect the source language of
   text, and retrieve lists of supported languages. The API supports both basic (v2) and advanced (v3) translation
   capabilities including batch translation, custom models, glossaries, and adaptive translation.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
