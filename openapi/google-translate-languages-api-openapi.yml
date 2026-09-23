@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Translation Detections Languages API
+  title: Google Cloud Translation Languages API
   description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.
   version: 3.0.0
   contact:

@@ -47,18 +47,6 @@ paths:
                 $ref: '#/components/schemas/DetectLanguageResponse'
 components:
   schemas:
-    DetectLanguageResponse:
-      type: object
-      properties:
-        data:
-          type: object
-          properties:
-            detections:
-              type: array
-              items:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Detection'
     Detection:
       type: object
       properties:
@@ -71,6 +59,18 @@ components:
         isReliable:
           type: boolean
           description: Whether the detection is reliable.
+    DetectLanguageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            detections:
+              type: array
+              items:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Detection'
     DetectLanguageRequest:
       type: object
       required:

@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Translation Detections Translations API
+  title: Google Cloud Translation Translations API
   description: The Google Cloud Translation API provides programmatic access to Google's neural machine translation technology. It enables developers to dynamically translate text between thousands of language pairs, detect the language of source text, and retrieve a list of supported languages. The API supports both basic (v2) and advanced (v3) translation capabilities including batch translation, custom models, and glossaries.
   version: 3.0.0
   contact:
@@ -57,6 +57,18 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/Translation'
+    Translation:
+      type: object
+      properties:
+        translatedText:
+          type: string
+          description: The translated text.
+        detectedSourceLanguage:
+          type: string
+          description: The detected source language code.
+        model:
+          type: string
+          description: The translation model used.
     TranslateTextRequest:
       type: object
       required:
@@ -83,18 +95,6 @@ components:
         model:
           type: string
           description: The translation model (base or nmt).
-    Translation:
-      type: object
-      properties:
-        translatedText:
-          type: string
-          description: The translated text.
-        detectedSourceLanguage:
-          type: string
-          description: The detected source language code.
-        model:
-          type: string
-          description: The translation model used.
 externalDocs:
   description: Google Cloud Translation API Documentation
   url: https://cloud.google.com/translate/docs
