@@ -47,6 +47,16 @@ paths:
                 $ref: '#/components/schemas/TranslateTextResponse'
 components:
   schemas:
+    TranslateTextResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            translations:
+              type: array
+              items:
+                $ref: '#/components/schemas/Translation'
     Translation:
       type: object
       properties:
@@ -59,16 +69,6 @@ components:
         model:
           type: string
           description: The translation model used.
-    TranslateTextResponse:
-      type: object
-      properties:
-        data:
-          type: object
-          properties:
-            translations:
-              type: array
-              items:
-                $ref: '#/components/schemas/Translation'
     TranslateTextRequest:
       type: object
       required:
