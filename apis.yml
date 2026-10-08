@@ -108,6 +108,12 @@ apis:
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/google-translate/refs/heads/main/json-ld/google-translate.jsonld
 common:
+- type: Plans
+  url: plans/google-translate-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/google-translate-rate-limits.yml
+- type: FinOps
+  url: finops/google-translate-finops.yml
 - type: Website
   url: https://www.google.com/
 - type: PostmanWorkspace
