@@ -47,28 +47,6 @@ paths:
                 $ref: '#/components/schemas/TranslateTextResponse'
 components:
   schemas:
-    TranslateTextResponse:
-      type: object
-      properties:
-        data:
-          type: object
-          properties:
-            translations:
-              type: array
-              items:
-                $ref: '#/components/schemas/Translation'
-    Translation:
-      type: object
-      properties:
-        translatedText:
-          type: string
-          description: The translated text.
-        detectedSourceLanguage:
-          type: string
-          description: The detected source language code.
-        model:
-          type: string
-          description: The translation model used.
     TranslateTextRequest:
       type: object
       required:
@@ -95,6 +73,28 @@ components:
         model:
           type: string
           description: The translation model (base or nmt).
+    TranslateTextResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            translations:
+              type: array
+              items:
+                $ref: '#/components/schemas/Translation'
+    Translation:
+      type: object
+      properties:
+        translatedText:
+          type: string
+          description: The translated text.
+        detectedSourceLanguage:
+          type: string
+          description: The detected source language code.
+        model:
+          type: string
+          description: The translation model used.
 externalDocs:
   description: Google Cloud Translation API Documentation
   url: https://cloud.google.com/translate/docs

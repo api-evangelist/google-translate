@@ -47,28 +47,6 @@ paths:
                 $ref: '#/components/schemas/DetectLanguageResponse'
 components:
   schemas:
-    DetectLanguageResponse:
-      type: object
-      properties:
-        data:
-          type: object
-          properties:
-            detections:
-              type: array
-              items:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Detection'
-    DetectLanguageRequest:
-      type: object
-      required:
-      - q
-      properties:
-        q:
-          type: array
-          items:
-            type: string
-          description: The text to detect the language of.
     Detection:
       type: object
       properties:
@@ -81,6 +59,28 @@ components:
         isReliable:
           type: boolean
           description: Whether the detection is reliable.
+    DetectLanguageRequest:
+      type: object
+      required:
+      - q
+      properties:
+        q:
+          type: array
+          items:
+            type: string
+          description: The text to detect the language of.
+    DetectLanguageResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            detections:
+              type: array
+              items:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Detection'
 externalDocs:
   description: Google Cloud Translation API Documentation
   url: https://cloud.google.com/translate/docs
